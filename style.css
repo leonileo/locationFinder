@@ -50,3 +50,9 @@ body{
     color: #000;
     background: white;
 }
+@media (max-width: 550px) {
+    .container{
+        width: 100%;
+         margin: 20px;
+    }
+}
