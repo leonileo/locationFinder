@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, rgba(255, 0, 0, 0.562), lightblue);
+}
+.container{
+    height: 50vh;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff59;
+}
+.status{
+    text-align: center;
+    color: #fff;
+}
+.find-state{
+    padding: 15px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: #fff;
+    background: none;
+    transition: all .2s;
+}
+.btn{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.find-state:hover{
+    cursor: pointer;
+    color: #000;
+    background: white;
+}
