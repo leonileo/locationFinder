@@ -12,6 +12,7 @@ body{
     background: linear-gradient(45deg, rgba(255, 0, 0, 0.562), lightblue);
 }
 .container{
+    width: 50%;
     height: 50vh;
     border-radius: 10px;
     display: flex;
