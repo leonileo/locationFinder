@@ -1,6 +1,7 @@
 const findMyState = () => {
 
     const status = document.querySelector('.status');
+    const place = document.querySelector('.place');
     
     const success = (position) => {
         console.log(position)
@@ -13,7 +14,8 @@ const findMyState = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data)
-        status.textContent = data.principalSubdivision
+        status.textContent = data.principalSubdivision + ", "
+        place.textContent = data.locality
         })
     }
     const error = () => {
