@@ -15,7 +15,6 @@ const findMyState = () => {
         fetch(geoApiUrl)
         .then(res => res.json())
         .then(data => {
-            console.log(data)
             status.textContent = data.principalSubdivision + ", "
             place.textContent = data.locality
         })
