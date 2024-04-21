@@ -21,6 +21,7 @@ const findMyState = () => {
     const error = () => {
         status.textContent = 'Unable to retrieve your location';
     }     
-        navigator.geolocation.getCurrentPosition(success, error);
-}
-document.querySelector('.find-state').addEventListener('click', findMyState);
+    console.log(navigator.geolocation.getCurrentPosition(success, error))    
+    }
+findMyState()
+    // document.querySelector('.find-state').addEventListener('click', findMyState);
