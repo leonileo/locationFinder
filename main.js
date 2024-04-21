@@ -2,8 +2,15 @@ const findMyState = () => {
 
     const status = document.querySelector('.status');
     const place = document.querySelector('.place');
-    
-    const success = (position) => {
+//     navigator.permissions
+//     .query({ name: "geolocation" })
+//     .then((permissionStatus) => {
+//       console.log(`geolocation permission status is ${permissionStatus.state}`);
+//       permissionStatus.state = "granted"
+//     //   navigator.geolocation.getCurrentPosition(success, error)
+// });
+
+const success = (position) => {
         console.log(position)
         const latitude = position.coords.latitude;
         const longitude = position.coords.longitude;
@@ -14,14 +21,14 @@ const findMyState = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data)
-        status.textContent = data.principalSubdivision + ", "
-        place.textContent = data.locality
+            status.textContent = data.principalSubdivision + ", "
+            place.textContent = data.locality
         })
     }
     const error = () => {
         status.textContent = 'Unable to retrieve your location';
-    }     
-    console.log(navigator.geolocation.getCurrentPosition(success, error))    
+    }         
+    console.log(navigator.geolocation.watchPosition(success))
     }
-findMyState()
-    // document.querySelector('.find-state').addEventListener('click', findMyState);
+    document.querySelector('.find-state').addEventListener('click', findMyState);
+    findMyState()
